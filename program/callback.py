@@ -43,7 +43,7 @@ async def cbstart(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbhowtouse"))
 async def cbguides(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""❓ **Basic Guide for using this bot:**
+        f"""❓ **Basic Guide For Using This Bot ❔:**
 
 1.) **First, add me to your group.**
 2.) **Then, promote me as administrator and give all permissions except Anonymous Admin.**
@@ -52,9 +52,9 @@ async def cbguides(_, query: CallbackQuery):
 4.) **Turn on the video chat first before start to play video/music.**
 5.) **Sometimes, reloading the bot by using /reload command can help you to fix some problem.**
 
-📌 **If the userbot not joined to video chat, make sure if the video chat already turned on, or type /userbotleave then type /userbotjoin again.**
+📌 **If The Userbot Not Joined To Video Chat, Make Sure If The Video Chat Already Turned On, Or Type /userbotleave Then Type /userbotjoin Again.**
 
- **If you have a follow-up questions about this bot, you can tell it on my support chat here: @{GROUP_SUPPORT}**
+🕊️**If You Have A Follow-up Questions About This Bot, You Can Tell It On My Support Chat Here: @{GROUP_SUPPORT}**
 
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("🔙 Bᴀᴄᴋ", callback_data="cbstart")]]
@@ -72,10 +72,10 @@ async def cbcmds(_, query: CallbackQuery):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("👷🏻 Aᴅᴍɪɴ ", callback_data="cbadmin"),
-                    InlineKeyboardButton("🧙🏻 Sᴜᴅᴏ ", callback_data="cbsudo"),
+                    InlineKeyboardButton("👷🏻 Aᴅᴍɪɴ", callback_data="cbadmin"),
+                    InlineKeyboardButton("🧙🏻 Sᴜᴅᴏ", callback_data="cbsudo"),
                 ],[
-                    InlineKeyboardButton("📚 Bᴀsɪᴄ ", callback_data="cbbasic")
+                    InlineKeyboardButton("📚 Bᴀsɪᴄ", callback_data="cbbasic")
                 ],[
                     InlineKeyboardButton("🔙 Bᴀᴄᴋ", callback_data="cbstart")
                 ],
@@ -87,7 +87,7 @@ async def cbcmds(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbbasic"))
 async def cbbasic(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"🏮 here is the basic commands:"
+        f"""🏮 Here Is The Basic Commands:
 
 » /play (song name/link) - play music on video chat
 » /stream (query/link) - stream the yt live/radio live music
@@ -103,6 +103,7 @@ async def cbbasic(_, query: CallbackQuery):
 » /uptime - show the bot uptime status
 » /alive - show the bot alive info (in group)
 
+🥀 Powered by {BOT_NAME} AI""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("🔙 Bᴀᴄᴋ", callback_data="cbcmds")]]
         ),
@@ -112,7 +113,7 @@ async def cbbasic(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbadmin"))
 async def cbadmin(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"🏮 here is the admin commands:"
+        f"""🏮 Here Is The Admin Commands:
 
 » /pause - pause the stream
 » /resume - resume the stream
@@ -124,6 +125,7 @@ async def cbadmin(_, query: CallbackQuery):
 » /userbotjoin - invite the userbot to join group
 » /userbotleave - order userbot to leave from group
 
+🥀 Powered by {BOT_NAME} AI""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("🔙 Bᴀᴄᴋ", callback_data="cbcmds")]]
         ),
@@ -132,12 +134,13 @@ async def cbadmin(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbsudo"))
 async def cbsudo(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"🏮 here is the sudo commands:"
+        f"""🏮 Here Is The Sudo Commands:
 
 » /rmw - clean all raw files
 » /rmd - clean all downloaded files
 » /leaveall - order userbot to leave from all group
 
+🥀 Powered by {BOT_NAME} AI""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("🔙 Bᴀᴄᴋ", callback_data="cbcmds")]]
         ),
