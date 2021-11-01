@@ -57,7 +57,7 @@ async def start_(client: Client, message: Message):
             reply_markup=InlineKeyboardMarkup(
             [[
                     InlineKeyboardButton(
-                        "💞 Sᴜᴍᴍᴏɴ Mᴇ 💞", url=f"https://t.me/{Veez.BOT_USERNAME}?startgroup=true")
+                        "💞 Sᴜᴍᴍᴏɴ Mᴇ 💞", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
                 ], [
                     InlineKeyboardButton(
                         "💥 Hᴏᴡ Tᴏ Usᴇ Mᴇ", callback_data="cbguide")
