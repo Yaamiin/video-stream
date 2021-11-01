@@ -65,7 +65,7 @@ async def cbguides(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbcmds"))
 async def cbcmds(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""**Hello [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !**
+        f"""**Hello [{query.message.chat.first_name}](tg://user?id={query.message.chat.id})**
 
 » **Press The Button Below To Read The Explanation And See The List Of Available Commands !**
 
