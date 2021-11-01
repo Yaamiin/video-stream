@@ -15,35 +15,48 @@ from config import (
 @Client.on_callback_query(filters.regex("cbstart"))
 async def cbstart(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"Hᴇʟʟᴏ Tʜᴇʀᴇ, Iᴀᴍ Eʟɪɴᴀ Vɪᴅᴇᴏ Sᴛʀᴇᴀᴍɪɴɢ Bᴏᴛ ✨ [ ](https://telegra.ph/file/6ac4eac769bd785f27281.jpg) \n\n Lᴇᴛs Eɴᴊᴏʏ Cɪɴᴇᴍᴀᴛɪᴄ Vɪᴇᴡ Oғ Gʀᴏᴜᴘ Vɪᴅᴇᴏ Pʟᴀʏᴇʀ Wɪᴛʜ Yᴏᴜʀ Fʀɪᴇɴᴅs ✨❤️ "
-            f"\n\n 𝑹𝒆𝒈𝒂𝒓𝒅𝒔 🥀 : @Pratheek_XD ",
-            reply_markup=InlineKeyboardMarkup(
-            [[
+        f"""✨ **Welcome [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !**\n
+💭 **[{BOT_NAME}](https://t.me/{BOT_USERNAME}) allows you to play music and video on groups through the new Telegram's video chats!**
+
+💡 **Find out all the Bot's commands and how they work by clicking on the » 📚 Commands button!**
+
+🔖 **To know how to use this bot, please click on the » ❓ Basic Guide button!**""",
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
                     InlineKeyboardButton(
-                        "💞 Sᴜᴍᴍᴏɴ Mᴇ 💞", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
-                ], [
+                        "➕ Add me to your Group ➕",
+                        url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
+                    )
+                ],
+                [InlineKeyboardButton("❓ Basic Guide", callback_data="cbhowtouse")],
+                [
+                    InlineKeyboardButton("📚 Commands", callback_data="cbcmds"),
+                    InlineKeyboardButton("❤ Donate", url=f"https://t.me/{OWNER_NAME}"),
+                ],
+                [
                     InlineKeyboardButton(
-                        "💥 Hᴏᴡ Tᴏ Usᴇ Mᴇ", callback_data="cbhowtouse")
-                ], [
+                        "👥 Official Group", url=f"https://t.me/{GROUP_SUPPORT}"
+                    ),
                     InlineKeyboardButton(
-                        "✨ Gʀᴏᴜᴘ", url="https://t.me/SHIZUKA_VC_SUPPORT"),
+                        "📣 Official Channel", url=f"https://t.me/{UPDATES_CHANNEL}"
+                    ),
+                ],
+                [
                     InlineKeyboardButton(
-                        "📣 Cʜᴀɴɴᴇʟ", url="https://t.me/aboutpratheek")
-                ], [
-                    InlineKeyboardButton(
-                        "🥀 Dᴇᴠ", url="https://t.me/pratheek06")
-                ], [
-                    InlineKeyboardButton(
-                        "❓ Hᴇʟᴘ & Cᴏᴍᴍᴀɴᴅs ❔", callback_data="cbcmds"),
-                ]]
-            )
-            )
+                        "🌐 Source Code", url="https://github.com/levina-lab/video-stream"
+                    )
+                ],
+            ]
+        ),
+        disable_web_page_preview=True,
+    )
 
 
 @Client.on_callback_query(filters.regex("cbhowtouse"))
 async def cbguides(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""❓ **Basic Guide For Using This Bot ❔:**
+        f"""❓ **Basic Guide for using this bot:**
 
 1.) **First, add me to your group.**
 2.) **Then, promote me as administrator and give all permissions except Anonymous Admin.**
@@ -52,12 +65,13 @@ async def cbguides(_, query: CallbackQuery):
 4.) **Turn on the video chat first before start to play video/music.**
 5.) **Sometimes, reloading the bot by using /reload command can help you to fix some problem.**
 
-📌 **If The Userbot Not Joined To Video Chat, Make Sure If The Video Chat Already Turned On, Or Type /userbotleave Then Type /userbotjoin Again.**
+📌 **If the userbot not joined to video chat, make sure if the video chat already turned on, or type /userbotleave then type /userbotjoin again.**
 
-🕊️**If You Have A Follow-up Questions About This Bot, You Can Tell It On My Support Chat Here: @{GROUP_SUPPORT}**
+💡 **If you have a follow-up questions about this bot, you can tell it on my support chat here: @{GROUP_SUPPORT}**
 
+⚡ __Powered by {BOT_NAME} A.I__""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("🔙 Bᴀᴄᴋ", callback_data="cbstart")]]
+            [[InlineKeyboardButton("🔙 Go Back", callback_data="cbstart")]]
         ),
     )
 
@@ -65,19 +79,20 @@ async def cbguides(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbcmds"))
 async def cbcmds(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"**Hello [{query.message.chat.first_name}](tg://user?id={query.message.chat.id})** "
+        f"""✨ **Hello [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !**
 
-» **Press The Button Below To Read The Explanation And See The List Of Available Commands !**
+» **press the button below to read the explanation and see the list of available commands !**
 
+⚡ __Powered by {BOT_NAME} A.I__""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("👷🏻 Aᴅᴍɪɴ", callback_data="cbadmin"),
-                    InlineKeyboardButton("🧙🏻 Sᴜᴅᴏ", callback_data="cbsudo"),
+                    InlineKeyboardButton("👷🏻 Admin Cmd", callback_data="cbadmin"),
+                    InlineKeyboardButton("🧙🏻 Sudo Cmd", callback_data="cbsudo"),
                 ],[
-                    InlineKeyboardButton("📚 Bᴀsɪᴄ", callback_data="cbbasic")
+                    InlineKeyboardButton("📚 Basic Cmd", callback_data="cbbasic")
                 ],[
-                    InlineKeyboardButton("🔙 Bᴀᴄᴋ", callback_data="cbstart")
+                    InlineKeyboardButton("🔙 Go Back", callback_data="cbstart")
                 ],
             ]
         ),
@@ -103,9 +118,9 @@ async def cbbasic(_, query: CallbackQuery):
 » /uptime - show the bot uptime status
 » /alive - show the bot alive info (in group)
 
-🥀 Powered by {BOT_NAME} AI""",
+⚡️ __Powered by {BOT_NAME} AI__""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("🔙 Bᴀᴄᴋ", callback_data="cbcmds")]]
+            [[InlineKeyboardButton("🔙 Go Back", callback_data="cbcmds")]]
         ),
     )
 
@@ -125,9 +140,9 @@ async def cbadmin(_, query: CallbackQuery):
 » /userbotjoin - invite the userbot to join group
 » /userbotleave - order userbot to leave from group
 
-🥀 Powered by {BOT_NAME} AI""",
+⚡️ __Powered by {BOT_NAME} AI__""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("🔙 Bᴀᴄᴋ", callback_data="cbcmds")]]
+            [[InlineKeyboardButton("🔙 Go Back", callback_data="cbcmds")]]
         ),
     )
 
@@ -140,9 +155,9 @@ async def cbsudo(_, query: CallbackQuery):
 » /rmd - clean all downloaded files
 » /leaveall - order userbot to leave from all group
 
-🥀 Powered by {BOT_NAME} AI""",
+⚡ __Powered by {BOT_NAME} AI__""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("🔙 Bᴀᴄᴋ", callback_data="cbcmds")]]
+            [[InlineKeyboardButton("🔙 Go Back", callback_data="cbcmds")]]
         ),
     )
 
