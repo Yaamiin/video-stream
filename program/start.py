@@ -60,10 +60,7 @@ async def start_(client: Client, message: Message):
                         "💞 Sᴜᴍᴍᴏɴ Mᴇ 💞", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
                 ], [
                     InlineKeyboardButton(
-                        "💥 Hᴏᴡ Tᴏ Usᴇ Mᴇ", callback_data="cbguide")
-                ], [
-                    InlineKeyboardButton(
-                        "💛 Aʙᴏᴜᴛ", callback_data="cbinfo")
+                        "💥 Hᴏᴡ Tᴏ Usᴇ Mᴇ", callback_data="cbhowtouse")
                 ], [
                     InlineKeyboardButton(
                         "✨ Gʀᴏᴜᴘ", url="https://t.me/SHIZUKA_VC_SUPPORT"),
@@ -74,7 +71,7 @@ async def start_(client: Client, message: Message):
                         "🥀 Dᴇᴠ", url="https://t.me/pratheek06")
                 ], [
                     InlineKeyboardButton(
-                        "❓ Hᴇʟᴘ & Cᴏᴍᴍᴀɴᴅs ❔", callback_data="cblist")
+                        "❓ Hᴇʟᴘ & Cᴏᴍᴍᴀɴᴅs ❔", callback_data="cbcmds"),
                 ]]
             )
             )
