@@ -52,41 +52,31 @@ async def _human_time_duration(seconds):
 )
 async def start_(client: Client, message: Message):
     await message.reply_text(
-        f"""✨ **Welcome {message.from_user.mention()} !**\n
-💭 [{BOT_NAME}](https://t.me/{BOT_USERNAME}) **allows you to play music and video on groups through the new Telegram's video chats!**
-
-💡 **Find out all the Bot's commands and how they work by clicking on the » 📚 Commands button!**
-
-🔖 **To know how to use this bot, please click on the » ❓ Basic Guide button!**
-""",
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
+        f"Hᴇʟʟᴏ Tʜᴇʀᴇ, Iᴀᴍ Eʟɪɴᴀ Vɪᴅᴇᴏ Sᴛʀᴇᴀᴍɪɴɢ Bᴏᴛ ✨ [ ](https://telegra.ph/file/6ac4eac769bd785f27281.jpg) \n\n Lᴇᴛs Eɴᴊᴏʏ Cɪɴᴇᴍᴀᴛɪᴄ Vɪᴇᴡ Oғ Gʀᴏᴜᴘ Vɪᴅᴇᴏ Pʟᴀʏᴇʀ Wɪᴛʜ Yᴏᴜʀ Fʀɪᴇɴᴅs ✨❤️ "
+            f"\n\n 𝑹𝒆𝒈𝒂𝒓𝒅𝒔 🥀 : @Pratheek_XD ",
+            reply_markup=InlineKeyboardMarkup(
+            [[
                     InlineKeyboardButton(
-                        "➕ Add me to your Group ➕",
-                        url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
-                    )
-                ],
-                [InlineKeyboardButton("❓ Basic Guide", callback_data="cbhowtouse")],
-                [
-                    InlineKeyboardButton("📚 Commands", callback_data="cbcmds"),
-                    InlineKeyboardButton("❤️ Donate", url=f"https://t.me/{OWNER_NAME}"),
-                ],
-                [
+                        "💞 Sᴜᴍᴍᴏɴ Mᴇ 💞", url=f"https://t.me/{Veez.BOT_USERNAME}?startgroup=true")
+                ], [
                     InlineKeyboardButton(
-                        "👥 Official Group", url=f"https://t.me/{GROUP_SUPPORT}"
-                    ),
+                        "💥 Hᴏᴡ Tᴏ Usᴇ Mᴇ", callback_data="cbguide")
+                ], [
                     InlineKeyboardButton(
-                        "📣 Official Channel", url=f"https://t.me/{UPDATES_CHANNEL}"
-                    ),
-                ],
-                [
+                        "💛 Aʙᴏᴜᴛ", callback_data="cbinfo")
+                ], [
                     InlineKeyboardButton(
-                        "🌐 Source Code", url="https://github.com/levina-lab/video-stream"
-                    )
-                ],
-            ]
-        ),
+                        "✨ Gʀᴏᴜᴘ", url="https://t.me/SHIZUKA_VC_SUPPORT"),
+                    InlineKeyboardButton(
+                        "📣 Cʜᴀɴɴᴇʟ", url="https://t.me/aboutpratheek")
+                ], [
+                    InlineKeyboardButton(
+                        "🥀 Dᴇᴠ", url="https://t.me/pratheek06")
+                ], [
+                    InlineKeyboardButton(
+                        "❓ Hᴇʟᴘ & Cᴏᴍᴍᴀɴᴅs ❔", callback_data="cblist")
+                ]]
+            ))
         disable_web_page_preview=True,
     )
 
@@ -133,7 +123,7 @@ async def get_uptime(client: Client, message: Message):
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
     await message.reply_text(
-        "🤖 bot status:\n"
+        "🤖 Bot Status:\n"
         f"• **uptime:** `{uptime}`\n"
         f"• **start time:** `{START_TIME_ISO}`"
     )
