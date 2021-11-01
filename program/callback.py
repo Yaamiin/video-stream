@@ -87,7 +87,7 @@ async def cbcmds(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbbasic"))
 async def cbbasic(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""🏮 Here Is The Basic Commands:
+        f"""🏮 here is the basic commands:
 
 » /play (song name/link) - play music on video chat
 » /stream (query/link) - stream the yt live/radio live music
@@ -113,7 +113,7 @@ async def cbbasic(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbadmin"))
 async def cbadmin(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""🏮 Here Is The Admin Commands:
+        f"""🏮 here is the admin commands:
 
 » /pause - pause the stream
 » /resume - resume the stream
@@ -134,7 +134,7 @@ async def cbadmin(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbsudo"))
 async def cbsudo(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""🏮 Here Is The Sudo Commands:
+        f"""🏮 here is the sudo commands:
 
 » /rmw - clean all raw files
 » /rmd - clean all downloaded files
