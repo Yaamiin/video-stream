@@ -76,7 +76,8 @@ async def start_(client: Client, message: Message):
                     InlineKeyboardButton(
                         "❓ Hᴇʟᴘ & Cᴏᴍᴍᴀɴᴅs ❔", callback_data="cblist")
                 ]]
-            ))
+            )
+            )
         disable_web_page_preview=True,
     )
 
