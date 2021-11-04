@@ -52,7 +52,7 @@ async def _human_time_duration(seconds):
 )
 async def start_(client: Client, message: Message):
     await message.reply_text(
-        f"Hᴇʟʟᴏ Tʜᴇʀᴇ, Iᴀᴍ Eʟɪɴᴀ Vɪᴅᴇᴏ Sᴛʀᴇᴀᴍɪɴɢ Bᴏᴛ ✨ [ ](https://telegra.ph/file/6ac4eac769bd785f27281.jpg) \n\n Lᴇᴛs Eɴᴊᴏʏ Cɪɴᴇᴍᴀᴛɪᴄ Vɪᴇᴡ Oғ Gʀᴏᴜᴘ Vɪᴅᴇᴏ Pʟᴀʏᴇʀ Wɪᴛʜ Yᴏᴜʀ Fʀɪᴇɴᴅs ✨❤️ "
+        f"Hᴇʟʟᴏ Tʜᴇʀᴇ, Iᴀᴍ Wʜɪᴛᴇ ʜᴀᴛ Vɪᴅᴇᴏ Sᴛʀᴇᴀᴍɪɴɢ Bᴏᴛ ✨ [ ](https://telegra.ph/file/6ac4eac769bd785f27281.jpg) \n\n Lᴇᴛs Eɴᴊᴏʏ Cɪɴᴇᴍᴀᴛɪᴄ Vɪᴇᴡ Oғ Gʀᴏᴜᴘ Vɪᴅᴇᴏ Pʟᴀʏᴇʀ Wɪᴛʜ Yᴏᴜʀ Fʀɪᴇɴᴅs ✨❤️ "
             f"\n\n 𝑹𝒆𝒈𝒂𝒓𝒅𝒔 🥀 : @Somalihacker1 ",
             reply_markup=InlineKeyboardMarkup(
             [[
@@ -68,7 +68,7 @@ async def start_(client: Client, message: Message):
                         "📣 Cʜᴀɴɴᴇʟ", url="https://t.me/Somalimusicbot")
                 ], [
                     InlineKeyboardButton(
-                        "🥀 Dᴇᴠ", url="https://t.me/Somalihacker1")
+                        "🥀 Dᴇᴠ", url="https://t.me/Somaliprogrammer")
                 ], [
                     InlineKeyboardButton(
                         "❓ Hᴇʟᴘ & Cᴏᴍᴍᴀɴᴅs ❔", callback_data="cbcmds"),
