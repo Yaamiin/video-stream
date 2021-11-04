@@ -16,7 +16,7 @@ from config import (
 async def cbstart(_, query: CallbackQuery):
     await query.edit_message_text(
         f"Hᴇʟʟᴏ Tʜᴇʀᴇ, Iᴀᴍ Eʟɪɴᴀ Vɪᴅᴇᴏ Sᴛʀᴇᴀᴍɪɴɢ Bᴏᴛ ✨ [ ](https://telegra.ph/file/6ac4eac769bd785f27281.jpg) \n\n Lᴇᴛs Eɴᴊᴏʏ Cɪɴᴇᴍᴀᴛɪᴄ Vɪᴇᴡ Oғ Gʀᴏᴜᴘ Vɪᴅᴇᴏ Pʟᴀʏᴇʀ Wɪᴛʜ Yᴏᴜʀ Fʀɪᴇɴᴅs ✨❤️ "
-            f"\n\n 𝑹𝒆𝒈𝒂𝒓𝒅𝒔 🥀 : @Pratheek_XD ",
+            f"\n\n 𝑹𝒆𝒈𝒂𝒓𝒅𝒔 🥀 : @Somaliprogrammer ",
             reply_markup=InlineKeyboardMarkup(
             [[
                     InlineKeyboardButton(
@@ -26,12 +26,12 @@ async def cbstart(_, query: CallbackQuery):
                         "💥 Hᴏᴡ Tᴏ Usᴇ Mᴇ", callback_data="cbhowtouse")
                 ], [
                     InlineKeyboardButton(
-                        "✨ Gʀᴏᴜᴘ", url="https://t.me/SHIZUKA_VC_SUPPORT"),
+                        "✨ Gʀᴏᴜᴘ", url="https://t.me/Somalibots_help"),
                     InlineKeyboardButton(
-                        "📣 Cʜᴀɴɴᴇʟ", url="https://t.me/aboutpratheek")
+                        "📣 Cʜᴀɴɴᴇʟ", url="https://t.me/somalimusicbot")
                 ], [
                     InlineKeyboardButton(
-                        "🥀 Dᴇᴠ", url="https://t.me/pratheek06")
+                        "🥀 Dᴇᴠ", url="https://t.me/Somaliprogrammer")
                 ], [
                     InlineKeyboardButton(
                         "❓ Hᴇʟᴘ & Cᴏᴍᴍᴀɴᴅs ❔", callback_data="cbcmds"),
